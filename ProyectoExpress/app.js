@@ -16,7 +16,7 @@ routes(app);
 const server = app.listen(port, (error) => {
     if (error) return console.log('Error: ${error}');
 
-        console.log('El servidor escucha en el puerto ${server.address().port}');
+        console.log(`El servidor escucha en el puerto ${server.address().port}`);
 });
 
 /*
