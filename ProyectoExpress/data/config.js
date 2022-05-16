@@ -1,14 +1,15 @@
-// Conectar una cadena de conexion
-const mysql = require('mysql');
+const mysql = require('mssql');
 
+//Credenciales de conection a base de datos
 const config = {
-    host: 'localhost',
-    user: 'root',
-    password: 'qwerty',
-    database: 'api',
-    port: '3309',
+    server:'WINSERVEREDUARD',
+    user:'eduardoserver',
+    password:'Qwerty123',
+    database:'api',
+    options: {
+        "enableArithAbort": true,
+        "encrypt": false,
+    },
 };
 
-const pool = mysql.createPool(config);
-
-module.exports = pool;
+module.exports = config;
